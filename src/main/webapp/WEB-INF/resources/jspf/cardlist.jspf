@@ -1,0 +1,27 @@
+<c:forEach var="exposition" items="${expositionList}">
+    <div class="card">
+        <img src="${exposition.imagePath}" class="image"
+             alt="No image"/>
+        <div class="cardList">
+            <h5>${exposition.topic}</h5>
+            <ul>
+                <li>Starting: ${exposition.dateStart}</li>
+                <li>Finishing: ${exposition.dateEnd}</li>
+                <li>Price: ${exposition.price}</li>
+                <li>Places left: ${exposition.capacity}</li>
+            </ul>
+            <h6>For more information:</h6>
+            <a href="${exposition.detailsLink}">Link</a>
+        </div>
+        <c:if test="${exposition.capacity > 0}">
+            <form action="/purchase">
+                <input name="username" type="hidden" value="${login}"/>
+                <input name="expositionId" type="hidden" value="${exposition.id}"/>
+                <button class="btn btn-success knopka" type="submit">Purchase ticket</button>
+            </form>
+        </c:if>
+        <c:if test="${exposition.capacity == 0}">
+            <button class="btn knopka">Sold out</button>
+        </c:if>
+    </div>
+</c:forEach>
