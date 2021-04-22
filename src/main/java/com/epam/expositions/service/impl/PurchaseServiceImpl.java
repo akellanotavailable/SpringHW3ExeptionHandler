@@ -1,7 +1,7 @@
 package com.epam.expositions.service.impl;
 
+import com.epam.expositions.annotation.Timed;
 import com.epam.expositions.dao.PurchaseDAO;
-import com.epam.expositions.dao.impl.PurchaseDAOImpl;
 import com.epam.expositions.entity.Purchase;
 import com.epam.expositions.service.PurchaseService;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +11,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Timed
 public class PurchaseServiceImpl implements PurchaseService {
     private final PurchaseDAO purchaseDAO;
 

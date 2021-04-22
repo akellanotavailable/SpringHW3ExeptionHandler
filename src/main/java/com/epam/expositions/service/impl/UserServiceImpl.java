@@ -1,7 +1,7 @@
 package com.epam.expositions.service.impl;
 
+import com.epam.expositions.annotation.Timed;
 import com.epam.expositions.dao.UserDAO;
-import com.epam.expositions.dao.impl.UserDAOImpl;
 import com.epam.expositions.entity.User;
 import com.epam.expositions.exception.UserNotFoundException;
 import com.epam.expositions.service.UserService;
@@ -12,6 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Timed
 public class UserServiceImpl implements UserService {
 
     private final UserDAO userDAO;

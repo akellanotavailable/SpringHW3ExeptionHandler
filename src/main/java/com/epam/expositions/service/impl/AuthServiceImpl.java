@@ -1,7 +1,7 @@
 package com.epam.expositions.service.impl;
 
+import com.epam.expositions.annotation.Timed;
 import com.epam.expositions.dto.LoginDTO;
-import com.epam.expositions.entity.RoleName;
 import com.epam.expositions.entity.User;
 import com.epam.expositions.exception.InvalidDataException;
 import com.epam.expositions.exception.UserNotFoundException;
@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Timed
 public class AuthServiceImpl implements AuthService {
 
     private final UserService userService;

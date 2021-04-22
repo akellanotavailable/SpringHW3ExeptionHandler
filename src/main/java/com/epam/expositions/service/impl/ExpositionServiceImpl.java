@@ -1,7 +1,7 @@
 package com.epam.expositions.service.impl;
 
+import com.epam.expositions.annotation.Timed;
 import com.epam.expositions.dao.ExpositionDAO;
-import com.epam.expositions.dao.impl.ExpositionDAOImpl;
 import com.epam.expositions.dto.ExpositionDTO;
 import com.epam.expositions.entity.Exposition;
 import com.epam.expositions.entity.Status;
@@ -18,6 +18,7 @@ import static com.epam.expositions.util.Converter.convertLocalDateTimeToSQLDateS
 
 @Service
 @RequiredArgsConstructor
+@Timed
 public class ExpositionServiceImpl implements ExpositionService {
     private final ExpositionDAO expositionDAO;
 

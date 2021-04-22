@@ -1,9 +1,8 @@
 package com.epam.expositions.service.impl;
 
+import com.epam.expositions.annotation.Timed;
 import com.epam.expositions.dao.ExpositionDAO;
 import com.epam.expositions.dao.HallDAO;
-import com.epam.expositions.dao.impl.ExpositionDAOImpl;
-import com.epam.expositions.dao.impl.HallDAOImpl;
 import com.epam.expositions.dto.DurationDTO;
 import com.epam.expositions.dto.HallExpositionDTO;
 import com.epam.expositions.dto.HallTimetableDTO;
@@ -18,6 +17,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Timed
 public class HallServiceImpl implements HallService {
     private final HallDAO hallDAO;
     private final ExpositionDAO expositionDAO;

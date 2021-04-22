@@ -1,7 +1,7 @@
 package com.epam.expositions.service.impl;
 
+import com.epam.expositions.annotation.Timed;
 import com.epam.expositions.dao.UserDAO;
-import com.epam.expositions.dao.impl.UserDAOImpl;
 import com.epam.expositions.dto.RegisterDTO;
 import com.epam.expositions.entity.Role;
 import com.epam.expositions.entity.RoleName;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Timed
 public class RegisterServiceImpl implements RegisterService {
     private final UserDAO userDAO;
 
