@@ -12,6 +12,9 @@
     <h5>No time for losers.</h5>
     <h5>But we are the champions.</h5>
     <img src="https://ih1.redbubble.net/image.1459826481.6633/poster,840x830,f8f8f8-pad,1000x1000,f8f8f8.jpg" width="200" height="200"/>
+    <form method="post" action="about">
+        <button type="submit">memes</button>
+    </form>
 </div>
 </body>
 </html>
